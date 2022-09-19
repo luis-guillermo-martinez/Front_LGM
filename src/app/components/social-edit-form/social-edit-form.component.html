@@ -1,4 +1,4 @@
-
+<!-- 
 <section class="background-radial-gradient overflow-hidden" id="section" *ngIf="soc">
     <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
       <div class="row gx-lg-5 align-items-center mb-5">
@@ -31,9 +31,9 @@
           ></div>
           <div class="card bg-glass">
             <div class="card-body px-4 py-5 px-md-5">
-              <form #f="ngForm" (ngSubmit)="onUpdateSocial()" novalidate>
+              <form #f="ngForm" (ngSubmit)="onUpdateSocial()" novalidate>-->
                 <!-- Exp img -->
-                <div class="form-outline mb-4">
+                <!-- <div class="form-outline mb-4">
                   <input 
                     type = "string"
                     id = "soc.imgSocial"
@@ -43,9 +43,9 @@
                     required
                   />
                   <label class="form-label" for="imgSocial">Imagen Red Social</label>
-                </div>
+                </div> -->
                 <!-- business  -->
-                <div class="form-outline mb-4">
+                <!-- <div class="form-outline mb-4">
                   <input
                     type = "string"
                     id = "soc.nameSocial"
@@ -55,9 +55,9 @@
                     required
                   />
                   <label class="form-label" for="nameSocial">Nombre Red Social</label>
-                </div>
+                </div> -->
                 <!-- position  -->
-                <div class="form-outline mb-4">
+                <!-- <div class="form-outline mb-4">
                     <input 
                       type = "string"
                       id = "soc.linkSocial"
@@ -67,9 +67,9 @@
                       required
                     />
                     <label class="form-label" for="linkSocial">URL</label>
-                  </div>
+                  </div> -->
                 <!-- Submit button -->
-                <div class="container">
+                <!-- <div class="container">
                   <button
                     type="submit"
                     class="btn btn-primary btn-block mb-4"
@@ -86,5 +86,54 @@
         </div>
       </div>
     </div>
-  </section>
- 
+  </section>  -->
+
+  <div class="container" *ngIf="soc">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdateSocial()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <input 
+                    type = "string"
+                    id = "imgBusiness"
+                    name = "imgBusiness"
+                    class="form-control"
+                    [(ngModel)] = "soc.imgSocial"
+                    required
+                  />
+                  <label class="form-label" for="imgBusiness">Imagen Empresa</label>
+                </div>
+        
+                <div class="form-group">
+                    <input
+                    type = "string"
+                    id = "business"
+                    name = "business"
+                    class="form-control"
+                    [(ngModel)] = "soc.linkSocial"
+                    required
+                  />
+                  <label class="form-label" for="business">Empresa</label>
+                </div>
+        
+         <div class="form-group">
+         <input 
+                      type = "string"
+                      id = "position"
+                      name = "position"
+                      class="form-control"
+                      [(ngModel)] = "soc.nameSocial"
+                      required
+                    />
+                    <label class="form-label" for="position">Puesto</label>
+          
+                <button class="btn btn-primary">
+                    Actualizar
+                </button>
+        
+  
+              </div>        
+            </form>
+        </div>
+    </div>
+  </div>

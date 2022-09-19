@@ -17,9 +17,9 @@ import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-
+import { Error404Component } from './components/error404/error404.component';
 import { interceptorProvider } from './service/interseptor.service';
-
+import { TestsComponent } from './components/tests/tests.component';
 import { ProjectNewFormComponent } from './components/project-new-form/project-new-form.component';
 import { SkillNewFormComponent } from './components/skill-new-form/skill-new-form.component';
 import { EducationNewFormComponent } from './components/education-new-form/education-new-form.component';
@@ -46,7 +46,8 @@ import { SocialNewFormComponent } from './components/social-new-form/social-new-
     FooterComponent,
     HomeComponent,
     LoginComponent,
-
+    Error404Component,
+    TestsComponent,
     ProjectNewFormComponent,
     SkillNewFormComponent,
     EducationNewFormComponent,

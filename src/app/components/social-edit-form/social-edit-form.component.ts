@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { social } from 'src/app/model/social.model';
 import { SocialService } from 'src/app/service/social.service';
 
+
 @Component({
   selector: 'app-social-edit-form',
   templateUrl: './social-edit-form.component.html',
